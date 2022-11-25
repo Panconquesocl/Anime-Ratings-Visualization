@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+}
+#vis {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    background-image:url("img1.jpg");
+}
+.texto h1 {
+    position: absolute;
+    font-size: 80px;
+    color: white;
+    top: 20px;
+    left: 40px;
+}
+
+.texto p{
+    position: absolute;
+    color: white;
+    top: 155px;
+    left: 47px;
+
+}
+.container1{
+    position: relative;
+}
+.container2{
+    position: relative;
+}
+#vis:hover {
+    filter: blur(5px) brightness(25%);
+    cursor: pointer;
+    
+}
+#informe{
+    color: white;
+    width: 100%;
+    height: 500px;
+    background-image:url("img2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#informe:hover{
+    filter: blur(5px) brightness(25%);
+    cursor: pointer;
+}
+.texto2 h1 {
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top:20px;    
+    left: 40px;
+}
+.texto2 p{
+    color: white;
+    text-align: center;
+    position: absolute;
+    top:155px;    
+    left: 47px;
+}
+
+header{
+    position: sticky;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(16, 15, 15);
+}
+
+.container1{
+    cursor: pointer;
+}
+.container2{
+    cursor: pointer;
+}

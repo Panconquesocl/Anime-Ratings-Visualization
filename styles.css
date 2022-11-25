@@ -1,0 +1,100 @@
+.container{
+    justify-content: center;
+    text-align: center  ;
+}
+.box {
+    position: relative;
+    width: 1300px;
+    height: 1000px;
+    padding: 0;
+}
+
+#vis-1{
+    position: relative;
+    
+}
+
+#vis-2{
+    position: relative;
+    
+}
+body{
+    font-family: 'Courier New', monospace;
+    background-color: rgba(56, 59, 97, 0.933);
+    overflow-y: hidden;
+    padding: 0; 
+    margin: 0;
+}
+header{
+    display: inline-block;
+    vertical-align: center;
+    padding: 0;
+    width: 100%;
+    height: 60px;
+    background-color:rgb(50, 52, 74);
+}
+button{
+    font-weight: bold;
+    position: relative;
+    left: 10px;
+    top:820px;
+    width: 1300px;
+    height: 30px;
+    
+}
+#volver{
+    font-weight: bold;
+    width: 30px;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    font-size: 40px;
+    cursor: pointer;
+}
+#volver:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.circulito:hover{
+    cursor: pointer;
+}
+button:hover{
+    cursor: pointer;
+}
+.pedacito:hover{
+    cursor: pointer;
+}
+#leeme{
+    font-weight: bold;
+    width: 560px;
+    position: relative;
+    left: 200px;
+    top: -35px;
+    font-size: 40px;
+    cursor: pointer;}
+#leeme:hover{
+ cursor: pointer;
+ text-decoration: underline ;
+}
+#infobox{
+    outline: solid;
+    outline-color:black ;
+    overflow: hidden;
+    top: 70px;
+    left: 13px;
+    border-radius: 5px;
+    position: absolute;
+    background-color: rgba(204, 207, 215, 0.761);
+    width: 10px;
+    height: 10px;
+}   
+#controls{
+    width: 200px;
+    height: 25px;
+    position: absolute;
+    left: 1110px;
+    top: 65px;
+    border-radius: 10px;
+}
+
+
