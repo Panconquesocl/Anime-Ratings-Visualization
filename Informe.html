@@ -1,24 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://d3js.org/d3.v7.js"></script>
     <link rel="stylesheet" href="styles2.css">
+    <title>Informe</title>
   </head>
   <body>
-    <h1>Caracterizacion de Dominio</h1>
-    <h2>COntexto</h2>
-    <p>Myanimelist es una comunidad de internet doonde las personas pueden compartit informaccion respecto de animes y manga, es por esto que esta web maneja una enorme base de datos la cual alberga millones de animes e informacion de estos. 
-      Es natural para las personas aficionadas a estos medios estar constantemente consumiendo contenido, es por esto que es conveniente que exista una herramienta la cual facilite la exploracion de animes para que sea mas rapida y eficiente gracias a la capacidad de codificar varios datos al mismo tiempo de una manera comoda</p>
-    <h2>Naturaleza de los datos</h2>
-    <h2>Usuario objetivo</h2>
-    <h2>Tipo de uso</h2>
-    <h2>Fuente original de los datos</h2>
-    <h1>Abstraccion de datos y tareas</h1>
-    <h1>Codificacion visual e interaccion</h1>
+    <h1>Informe</h1>
+    <h1>Caracterizacion de dominio</h1>
 
+    <h2>Contexto</h2>
+    <p>
+      Myanimelist es una comunidad de internet donde las personas pueden compartir informacion respecto de 
+      animes y manga, es por esto que muchos amantes del anime recurren a este sitio para buscar nuevo contenido o aportar con informacion,
+      gracias a esto esta web maneja una enorme base de datos la cual alberga miles de animes e informacion sobre estos. 
+    </p>
+    
+    <h2>Usuario objetivo y uso de la herramienta</h2>
+    <p>
+      Es natural para las personas aficionadas a la animacion japonesa estar constantemente buscando contenido nuevo para consumir, 
+      es por esto que es conveniente que exista una herramienta visual, la cual, facilite la exploracion de animes y que sea rapida y eficiente 
+      gracias a la capacidad de codificar varios datos al mismo tiempo de una manera visualmente comoda, se espera que personas en busca de nuevos animes 
+      utilicen la herramienta para encontrar comodamente un nuevo anime para ver en base a caracteristicas importantes como su puntaje, popularidad o tipo.
+      La herramienta esta enfocada principalmente a personas que hablen español, sin embargo, ciertos textos se pueden presentar en ingles debido a que el dataset usado esta en este lenguaje.
+    </p>
+
+    <h2>Dataset y fuente original de los datos</h2>
+    <p>Los datos utilizados por la herramientra fueron obtenidos de la pagina Kaggle y provienen del archivo
+    <a href="https://www.kaggle.com/datasets/brunobacelardc/myanimelist-top-1000-anime">mal_top2000_anime.csv</a>
+    el cual almacena datos de cada anime dentro de los 2000 animes mejor calificados en Myanimelist estos datos corresponden a:
+      <ul>
+      <li>Id: Identificador numerico unico dentro de dataset</li>
+      <li>Name: Nombre del anime</li>
+      <li>Type: tipo de anime(TV, MOVIE, etc.) </li>
+      <li>Score: Calificacion promedio del anime obtenida a partir de el puntaje otorgado por cada usuario</li>
+      <li>Score Rank: Posicion en el ranking de puntajes</li>
+      <li>Popularity Rank: Posicion en el ranking de popularidad</li>
+      <li>Air date: Fechas entre las que se transmitio el Anime</li>
+      <li>Studio: Estudio que produjo el anime</li>
+      <li># Num. of episodes: Cantidad de episodios del anime</li>
+      <li>Genres: Lista con los generos del anime </li>
+      </ul>
+      </p>
+      <p>
+      El dataset original fue procesado para reemplazar el valor "None" por el simbolo "?" para que el al visualizar los datos sea mas facilitar el entendimiento, tambien
+      mediante el uso de la libreria pandas de python se utilizo el dataset para generar el archivo "data_types_proportions.csv" el cual contiene la cantidad de animes por cada categoria en el dataset.
+      </p>
+
+    <h1>Abstraccion de datos</h1>
+    <p>
+      El dataset presenta datos de manera tabular, estos datos corresponden a items y sus atributos, cada item siendo un anime y sus caracteristicas sus atributos como lo serian el nombre, tipo, 
+      calificacion, cantidad de episodios, etc.
+    </p>
+    <h2>Tipos de atributos</h2>
+    <p>
+      <ul>
+        <li>Id: Identificador numerico unico dentro de dataset, atributo del tipo categorico y unico</li>
+        <li>Name: Nombre del anime, atributo categorico</li>
+        <li>Type: tipo de anime(TV, MOVIE, etc.), atributo categorico </li>
+        <li>Score: Calificacion promedio del anime obtenida a partir de el puntaje otorgado por cada usuario, atributo cuantitativo, continuo, secuencial y jerarquico</li>
+        <li>Score Rank: Posicion en el ranking de puntajes, atributo cuantitativo, discreto, secuencial y jerarquico </li>
+        <li>Popularity Rank: Posicion en el ranking de popularidad, atributo cuantitativo, discreto, secuencial y jerarquico</li>
+        <li>Air date: Fechas entre las que se transmitio el Anime, atributo ordinal ciclico</li>
+        <li>Studio: Estudio que produjo el anime, atributo categorico</li>
+        <li># Num. of episodes: Cantidad de episodios del anime, atributo cuantitativo y discreto.</li>
+        <li>Genres: Lista con los generos del anime, atributo categorico</li>
+        </ul>
+    </p>
+
+    <h1>Tareas</h1>
+    <h2>Tarea 1</h2>
+    <p>Navegar y encontrar un anime en el cual un atributo cumpla con una condicion deseada</p>
+    <p>El usuario podra navegar entre los 2000 animes del dataset y encontrar uno que le atraiga respecto de sus atritbutos, como puede ser el con mayor puntaje, el mas popular , etc.</p>
+
+    <h2>Tarea 2</h2>
+    <p>Explorar la visualizacion y encontrar un anime llamativo</p>
+    <p>El usuario podra explorar de manera rapida los 2000 animes y descubrir uno que le interese</p>
+
+    <h2>Tarea 3</h2>
+    <p>Resumir datos importantes sobre un anime</p>
+    <p>El usuario podra obtener mas informacion si es que lo desea sobre un anime en especifico</p>
+
+    <h1>Codificacion visual e interaccion</h1>
+    <h2>Tarea 1</h2>
+    <p> 
+      Para que la opcion de navegacion fuese posible se decidio hacer un grafico de circulos en el cual los datos mas 
+      reelevantes (puntaje, ranking de popularidad) representaran cada eje asimismo se decidio que cada punto representara un anime
+      de este modo el usuario puede navegar atraves de todos los circulos del grafico y rapidamente saber que tan populares son y que puntaje tienen,
+      ademas se decidio representar el tipo de anime mediante un color, de esta manera cada punto tendra el color de su respectivo tipo.
+      Respecto a los ejes se decidio que estos tomarian el rango entre el maximo y minimo de sus atributos.
+      Debidoo al tamaño del dataset el grafico puede generar mucho ruido si se intenta observar a detalle, es por esto, que se implementa la opcion de zoom,
+      de esta forma el usuario puede acercarse a los circulos para asi poder limitar los circulos en pantalla y navegar de mejor manera, al hacer zoom las escalas permanecen visibles y se ajustan a la cantidad de zoom.
+      Para cumplir con esta tarea se implemento un grafico de torta el cual muestra la proporcion de los tipos de anime en todo el dataset actuando al mismo tiempo como leyenda y filtro, ya que,
+      explicita el significado de cada color y permite hacer click en los trozos del grafico filtrando el grafico de puntos para que solo se muestre el tipo seleccionado.
+      Por lo anterior se agrego un boton para reiniciar el grafico.
+    </p>
+    <h2>Tarea 2</h2>
+    <p>
+      Tal como anteriormente se menciono el grafico permite navegar para poder encontrar circulos en especifico, sin embargo, para el usuario que desea
+      explorar sin saber lo que busca exactamente, se decidio implementar un tooltip que aparece a lado de la visualizacion al posicionar el mouse sobre un circulo mostrando
+      informacion relevante y concisa para que el usuario pueda explorar rapidamente entre todos los animes.
+
+    </p>
+    <h2>Tarea 3</h2>
+    <p>Para cumplir esta tarea se decidio mejorar el tooltip de modo que se permita hacer click a los circulos para que asi el tooltip muestra mas informacion que la inicial
+      permitiendo que el usuario obtenga mayor informacion importante mientras explora.
+    </p>
+    <p>
+      A modo extra y para que la visualizacion fuese mas dinamica e interesante de usar se agrego musica de fondo, la cual, se puede desactivar si se desea.
+    </p>
+    <h1>Enlaces</h1>
+    <ul>
+      <li><a href="https://observablehq.com/@d3/scatterplot">
+        Codigo base para grafico de puntos
+      </a></li>
+      <li><a href="https://observablehq.com/@d3/pie-chart">
+        Codigo base para grafico de torta
+      </a></li>
+      <li><a href="https://www.youtube.com/watch?v=RHK5Urjwkc8">
+        Cancion de fondo
+      </a></li>
+    
+    
+      <li><a href="https://www.kaggle.com/datasets/brunobacelardc/myanimelist-top-1000-anime">
+        Dataset original
+      </a></li>
+      <li><a href="https://gist.github.com/Panconquesocl/2d030d75004ba77a3c3f4b27944fc1cd">
+        Csv de proporciones del dataset
+      </a></li>
+      <li><a href="https://gist.github.com/Panconquesocl/842625a36b6b7a4bff0f6109099ceb97">
+        Csv procesado y utilizado en la herramiena
+      </a></li>
+    </ul>
+    
   </body>
 </html>

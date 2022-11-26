@@ -9,7 +9,6 @@ function Scatterplot(data, {
     x = ([x]) => x, // given d in data, returns the (quantitative) x-value
     y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
     r = 1.8, // (fixed) radius of dots, in pixels
-    title, // given d in data, returns the title
     marginTop = 20, // top margin, in pixels
     marginRight = 30, // right margin, in pixels
     marginBottom = 30, // bottom margin, in pixels
@@ -198,9 +197,7 @@ function Scatterplot(data, {
 
     
 }
-function filterby(){
-    
-}
+
 function filterbytv(datosantiguos) { 
     if (datosantiguos.TIPO == "TV"){return true}
     return false;}
@@ -227,7 +224,6 @@ function updatevis1 (data, {
     x = ([x]) => x, // given d in data, returns the (quantitative) x-value
     y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
     r = 1.8, // (fixed) radius of dots, in pixels
-    title, // given d in data, returns the title
     marginTop = 20, // top margin, in pixels
     marginRight = 30, // right margin, in pixels
     marginBottom = 30, // bottom margin, in pixels
